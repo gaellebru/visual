@@ -51,7 +51,8 @@ var data = [
   ["Malawi","Financial empowerment for nature conservation in Northern Malawi","Tukombo",-12.0925785,34.0479569,"http://www.undp.org/content/undp/en/home/ourwork/ourstories/financial-empowerment-for-nature-conservation-in-northern-malawi.html","Success Story"  ],
   ["Swaziland: ","As rivers dry up, Swaziland builds dams to harvest water","",-26.522503,31.465866,"http://www.undp.org/content/undp/en/home/ourwork/ourstories/as-rivers-dry-up-swaziland-builds-dams-to-harvest-water.html","Success Story"  ],
   ["Benin","Limiter les risques climatiques au Bénin","Guene",11.7172493,3.2231727,"http://www.undp.org/content/undp/fr/home/ourwork/ourstories/limiter-les-risques-climatiques-au-benin.html","Success Story"  ],
-  ["India","Energy smart: the indian railways powers ahead","",25.958045,75.234375,"https://undp-india.exposure.co/energy-smart-the-indian-railways-powers-ahead","Photo essay"]
+  ["India","Energy smart: the indian railways powers ahead","",25.958045,75.234375,"https://undp-india.exposure.co/energy-smart-the-indian-railways-powers-ahead","Photo essay"],
+  ["Chile","Chile: energía limpia y eficiente para una mejor calidad de vida","",-29.177881, -70.707854,"http://www.undp.org/content/undp/es/home/ourwork/ourstories/chile--energia-limpia-y-eficiente-para-una-mejor-calidad-de-vida.html","Success Story"]
 ];
 
 var marker, infoWindow;
