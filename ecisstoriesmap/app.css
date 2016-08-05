@@ -4,3 +4,18 @@ html, body { height: 100%; margin: 0; padding: 0; }
    border: 5px solid white;
    border-radius: 20px; 
 }
+.marker-cluster div {
+  width: 75px;
+  height: 75px;	
+  border-radius: 50px;
+  font-size: 36px;
+}
+.marker-cluster span {
+  line-height: 75px;  
+}
+.gen-1 {
+  border-color: #00CC33;
+}
+.gen-2 {
+  border-color: #0099FF;
+}
