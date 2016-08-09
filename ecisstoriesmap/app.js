@@ -39,12 +39,13 @@ function addMarkers(response) {
         title: data.getValue(i, 1),
         icon: (data.getValue(i, 7) != null) ? L.icon({
           iconUrl: 'img/' + data.getValue(i, 7).trim(),
-          iconSize: [75,75],
+          iconSize: [50,50],
           className: 'marker-icon gen-' + data.getValue(i, 2)
         }) : new L.Icon.Default()
       };
       var marker = L.marker(latLng, options).bindPopup(popup);
       markers.addLayer(marker);
+      //L.marker(latLng, options).addTo(map).bindPopup(popup);
     }
   }                
   map.addLayer(markers);
