@@ -7,6 +7,14 @@ L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}'
 	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+// map legend
+var legend = L.control({position: 'bottomleft'});
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create('div', 'legend');
+  div.innerHTML = '<table><tr><td><img src="../shared/img/marker-icon-blue.png"></td><td>1st Gen</td></tr><tr><td><img src="../shared/img/marker-icon-green.png"></td><td>2nd Gen</td></tr></table>';
+  return div;
+};
+legend.addTo(map);
 
 // get project data from google spreadsheet
 google.charts.load('current', {packages: ['corechart']});
@@ -19,9 +27,6 @@ google.charts.setOnLoadCallback(function(){
 function addMarkers(response) {
   var data = response.getDataTable();
   var rows = data.getNumberOfRows();
-  /*var markers = L.markerClusterGroup({
-    showCoverageOnHover: false  
-  });*/
   for (var i = 0; i < rows; i++) {
     var coords = data.getValue(i, 6).split(',');
     if (coords.length == 2) {
@@ -35,18 +40,8 @@ function addMarkers(response) {
         popup += '<p><a href="' + data.getValue(i, 5) + '" target="_blank">read more</a></p>';
       }
       popup += '</div>';
-      var options = {
-        title: data.getValue(i, 1)/*,
-        icon: (data.getValue(i, 7) != null) ? L.icon({
-          iconUrl: 'img/' + data.getValue(i, 7).trim(),
-          iconSize: [50,50],
-          className: 'marker-icon gen-' + data.getValue(i, 2)
-        }) : new L.Icon.Default()*/
-      };
-      //var marker = L.marker(latLng, options).bindPopup(popup);
-      //markers.addLayer(marker);
-      L.marker(latLng, options).addTo(map).bindPopup(popup);
+      var icon = (data.getValue(i, 2) == 2) ? new L.Icon({iconUrl: '../shared/img/marker-icon-green.png'}) : new L.Icon.Default();
+      L.marker(latLng, {title: data.getValue(i, 1), icon: icon}).addTo(map).bindPopup(popup, {keepInView: true, autoPan: true});
     }
   }                
-  //map.addLayer(markers);
 }
