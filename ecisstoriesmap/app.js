@@ -31,11 +31,11 @@ function addMarkers(response) {
     var coords = data.getValue(i, 6).split(',');
     if (coords.length == 2) {
       var latLng = L.latLng(parseFloat(coords[0].trim()), parseFloat(coords[1].trim()));
-      var popup = '<div><h2>' + data.getValue(i, 3) + '</h2>';
+      var popup = '<div>' + data.getValue(i, 0) + '<h2>' + data.getValue(i, 3) + '</h2>';
       if (data.getValue(i, 8) != null) {
         popup += '<img src="img/' + data.getValue(i, 8) + '">';
       }
-      popup += '<p>' + data.getValue(i, 4) + '</p>';
+      popup +=  '<p>' + data.getValue(i, 4) + '</p>';
       if (data.getValue(i, 5) != null) {
         popup += '<p><a href="' + data.getValue(i, 5) + '" target="_blank">read more</a></p>';
       }
