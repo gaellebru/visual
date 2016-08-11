@@ -1,6 +1,6 @@
 html, body { height: 100%; margin: 0; padding: 0; }
 #map { height: 100%; }
-.marker-icon {
+/*.marker-icon {
    border: 5px solid white;
    border-radius: 20px; 
 }
@@ -18,4 +18,4 @@ html, body { height: 100%; margin: 0; padding: 0; }
 }
 .gen-2 {
   border-color: #0099FF;
-}
+}*/

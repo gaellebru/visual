@@ -19,16 +19,16 @@ google.charts.setOnLoadCallback(function(){
 function addMarkers(response) {
   var data = response.getDataTable();
   var rows = data.getNumberOfRows();
-  var markers = L.markerClusterGroup({
+  /*var markers = L.markerClusterGroup({
     showCoverageOnHover: false  
-  });
+  });*/
   for (var i = 0; i < rows; i++) {
     var coords = data.getValue(i, 6).split(',');
     if (coords.length == 2) {
       var latLng = L.latLng(parseFloat(coords[0].trim()), parseFloat(coords[1].trim()));
-      var popup = '<div><h1>' + data.getValue(i, 3) + '</h1>';
+      var popup = '<div><h2>' + data.getValue(i, 3) + '</h2>';
       if (data.getValue(i, 8) != null) {
-        popup += '<img src="' + data.getValue(i, 8) + '">';
+        popup += '<img src="img/' + data.getValue(i, 8) + '">';
       }
       popup += '<p>' + data.getValue(i, 4) + '</p>';
       if (data.getValue(i, 5) != null) {
@@ -36,17 +36,17 @@ function addMarkers(response) {
       }
       popup += '</div>';
       var options = {
-        title: data.getValue(i, 1),
+        title: data.getValue(i, 1)/*,
         icon: (data.getValue(i, 7) != null) ? L.icon({
           iconUrl: 'img/' + data.getValue(i, 7).trim(),
           iconSize: [50,50],
           className: 'marker-icon gen-' + data.getValue(i, 2)
-        }) : new L.Icon.Default()
+        }) : new L.Icon.Default()*/
       };
-      var marker = L.marker(latLng, options).bindPopup(popup);
-      markers.addLayer(marker);
-      //L.marker(latLng, options).addTo(map).bindPopup(popup);
+      //var marker = L.marker(latLng, options).bindPopup(popup);
+      //markers.addLayer(marker);
+      L.marker(latLng, options).addTo(map).bindPopup(popup);
     }
   }                
-  map.addLayer(markers);
+  //map.addLayer(markers);
 }
