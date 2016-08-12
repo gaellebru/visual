@@ -41,7 +41,7 @@ function addMarkers(response) {
       }
       popup += '</div>';
       var icon = (data.getValue(i, 2) == 2) ? new L.Icon({iconUrl: '../shared/img/marker-icon-green.png'}) : new L.Icon.Default();
-      L.marker(latLng, {title: data.getValue(i, 1), icon: icon}).addTo(map).bindPopup(popup, {keepInView: true, autoPan: true});
+      L.marker(latLng, {title: data.getValue(i, 1), icon: icon}).addTo(map).bindPopup(popup);
     }
   }                
 }
