@@ -16,12 +16,6 @@ legend.onAdd = function(map) {
 };
 legend.addTo(map);
 
-map.on('popupopen', function(e) {
-    var px = map.project(e.popup._latlng); // find the pixel location on the map where the popup anchor is
-    px.y -= e.popup._container.clientHeight; // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
-    map.panTo(map.unproject(px),{animate: true}); // pan to new center
-});
-
 // get project data from google spreadsheet
 google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(function(){
@@ -47,7 +41,7 @@ function addMarkers(response) {
       }
       popup += '</div>';
       var icon = (data.getValue(i, 2) == 2) ? new L.Icon({iconUrl: '../shared/img/marker-icon-green.png'}) : new L.Icon.Default();
-      L.marker(latLng, {title: data.getValue(i, 1), icon: icon}).addTo(map).bindPopup(popup);
+      L.marker(latLng, {title: data.getValue(i, 1), icon: icon}).addTo(map).bindPopup(popup, {keepInView: true});
     }
   }                
 }
