@@ -19,7 +19,7 @@ legend.addTo(map);
 // get project data from google spreadsheet
 google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(function(){
-  var queryString = encodeURIComponent('SELECT B,C,D,E,F,H,I,J,L WHERE E is not null OFFSET 4');
+  var queryString = encodeURIComponent('SELECT B,C,D,E,F,H,I,J,L WHERE E is not null');
   var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1hzj2e1CREa_V5HmJxOSehadHU08QzPC-IkqlA48QhpQ/gviz/tq?sheet=1stGen&tq=' + queryString);
   query.send(addMarkers);      
 });
