@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNDP Global Programme</title>
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- ios stuff -->
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- SEO meta tags -->
+	<meta name="description" content=""/>
+	<meta name="keywords" content/>
+	<meta name="author" content/>
+	<meta name="robots" content="index"/>
+
+	<!-- style -->
+	<link rel="stylesheet" href="assets/css/style.css?v=1.1">
+
+	<!-- data file -->
+	<!--<script type="text/javascript" src="assets/js/data.js?v=1.1"></script>-->
+
+	<!-- fonts -->
+	<script src="https://use.typekit.net/auq5epz.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body>
+
+<!-- container -->
+<div id="container">
+
+
+	<!-- content head -->
+	<div class="head">
+		<div class="head__primary">
+			<div class="head__logo">
+				<img src="assets/images/logo.png" alt="logo">
+				<img class="head__logotext" src="assets/images/logo_bottom.png" alt="logo text">
+			</div>
+			<div class="head__text">
+				<div class="head__text-inner">
+					<div class="year-text">2016</div>
+					<h1>The Global Programme for Strengthening the Rule of Law and Human Rights for Sustaining Peace and Fostering Development</h1>
+				</div>
+			</div>
+		</div>
+		<div class="head__secondary">
+			<h6>UNDP provides rule of law and human rights assistance to nearly 40 countries affected by crisis or conflict.</b></h6>
+		</div>
+	</div>
+	<!-- END content head -->
+
+
+	<div class="list">
+		<div class="list__btn">
+			<div class="list__btn-icon">
+				<div><span class="icon-map_marker"></span></div>
+			</div>
+			<div class="list__btn-txt">
+				<div><span>Select Country</span></div>
+			</div>
+			<div class="list__btn-arrow">
+				<div><span class="icon-arrow_right_thick"></span></div>
+			</div>
+		</div>
+
+		<div class="list__container">
+
+			<div class="list__outer"> <!-- outer scroll -->
+				<span class="icon-arrow_right_thick"></span>
+				<div class="list__inner"> <!-- inner scroll -->
+					<!-- country list -->
+					<ul id="country_list" class="country_list"></ul>
+				</div>
+			</div>
+
+			<div class="list__sb-container"> <!-- scroll bar container -->
+				<div class="list_sb"> <!-- scroll bar -->
+					<div class="list_scrub"></div> <!-- scrub bar -->
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!--<div class="country_details">-->
+		<div class="country_details tile__content">
+			<div class="tile__content-close"></div>
+			<div class="tile__content-outer">
+				<div class="tile__content-inner">
+					<div>
+						<h3></h3>
+						<ul></ul>
+						<a class="details_link" href="" target="_blank">View Full Country Profile</a>
+					</div>
+				</div>
+			</div>
+			<div class="content__sb-container">
+				<div class="content_sb">
+					<div class="content_scrub"></div>
+				</div>
+			</div>
+		</div>
+	<!--</div>-->
+
+
+	<!-- map and country container -->
+	<div class="map">
+		<!-- map zoom buttons -->
+		<div class="zoom__housing">
+			<div id="zoom_in"></div>
+			<div id="zoom_out"></div>
+		</div>
+
+		<!-- map -->
+		<div id="mapsvg"></div>
+		<div id="mapcover"></div>
+
+		<div id="instructions">
+			<div class="tile__content">
+				<div class="tile__content-close"></div>
+				<div class="tile__content-outer">
+					<div class="tile__content-inner">
+						<div>
+							<h3>WELCOME</h3>
+							<p>Click on a location to see key results achieved with UNDP support and the icons below to learn more about our work.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<!-- END map and country container -->
+
+
+	<!-- category tiles -->
+	<div class="footer">
+		<div class="footer__text">
+			<h4>Since 2008, the United Nations Development Programme has scaled up its efforts to support national partners:</h4>
+		</div>
+
+
+		<div class="tile__container">
+
+			<div class="tile tile--blue">
+				<div class="tile__inner">
+					<div class="tile__gfp">
+						<div></div>
+						<h5>The Global Focal Point</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>The Global<br/>Focal Point</h5>
+							<ul>
+								<li>Convene Expertise</li>
+								<li>Reduce Competition</li>
+								<li>Encourage Innovation</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tile__content">
+					<div class="tile__content-close"></div>
+					<div class="tile__content-outer">
+						<div class="tile__content-inner p">
+							<div>
+								<h2><img src="assets/images/globe_full.svg" alt="">The Global Focal Point</h2>
+								<ul>
+									<li>Convene Expertise</li>
+									<li>Reduce Competition</li>
+									<li>Encourage Innovation</li>
+								</ul>
+								<div>
+									In 2012, the Secretary-General designated UNDP and DPKO as co-leads of the Global Focal Point (GFP) for Rule of Law in Post-Conflict and Other Crisis Situations. Through the GFP, UNDP and DPKO, along with UNODC, UN Women, OHCHR, and other UN entities, respond to requests for support from Member States by convening rule of law expertise from across the UN system. This cooperation enables the GFP to: facilitate sector-wide support for national partners to strengthen the rule of law; ensure that the political dimensions of the rule of law are integrated into planning and implementation processes; and align comprehensive assistance with national needs and priorities.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="tile tile--lblue">
+				<div class="tile__inner">
+					<div class="tile__primary">
+						<div><span class="icon-political_engagement"></span></div>
+						<h5>Political Engagement</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>Political Engagement</h5>
+							<ul>
+								<li>Leverage Political Backing</li>
+								<li>Foster Conflict-Sensitivity</li>
+								<li>Mobilize Resources</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tile__content">
+					<div class="tile__content-close"></div>
+					<div class="tile__content-outer">
+						<div class="tile__content-inner">
+							<div class="temp">
+								<h3>Political Engagement</h3>
+								<ul>
+									<li>Leverage Political Backing</li>
+									<li>Foster Conflict-Sensitivity</li>
+									<li>Mobilize Resources</li>
+								</ul>
+								<div class="p">
+									UNDP is committed to developing politically sound programmes by framing technical engagement within political processes. When a political environment enables communities to drive justice and security reform and institutions to protect and promote human rights, the rule of law can create the foundation for sustainable peace. UNDP supports national partners to: develop holistic programming based on conflict analysis, mobilize resources, and leverage political backing in support of their aims to strengthen the rule of law and human rights. Creating and strengthening mechanisms that enhance accountability, including civil society engagement, is also crucial to this work.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="tile">
+				<div class="tile__inner">
+					<div class="tile__primary">
+						<div><span class="icon-transitional_justice"></span></div>
+						<h5>Transitional Justice</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>Transitional Justice</h5>
+							<ul>
+								<li>Provide Truth and Redress</li>
+								<li>Elevate the Voice of Victims</li>
+								<li>Promote National Reconciliation</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tile__content">
+					<div class="tile__content-close"></div>
+					<div class="tile__content-outer">
+						<div class="tile__content-inner">
+							<div>
+								<h3>Transitional Justice</h3>
+								<ul>
+									<li>Provide Truth and Redress</li>
+									<li>Elevate the Voice of Victims</li>
+									<li>Promote National Reconciliation</li>
+								</ul>
+								<div class="p">
+									UNDP works to support states in addressing legacies of violence through transitional justice mechanisms, including truth commissions and local processes, as well as by facilitating reparations for victims, and strengthening formal justice institutions to enable complementarity. UNDP’s approach to transitional justice is focused on creating nationally owned mechanisms, ensuring the involvement of - and attention to - vulnerable groups, and partnering with other UN and international organizations.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="tile tile--lblue">
+				<div class="tile__inner">
+					<div class="tile__primary">
+						<div><span class="icon-institution_building"></span></div>
+						<h5>Institution Building</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>Institution Building</h5>
+							<ul>
+								<li>Increase Technical Capacity</li>
+								<li>Strengthen Legal Frameworks</li>
+								<li>Foster Confidence in the State</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tile__content">
+					<div class="tile__content-close"></div>
+					<div class="tile__content-outer">
+						<div class="tile__content-inner">
+							<div>
+								<h3>Institution Building</h3>
+								<ul>
+									<li>Increase Technical Capacity</li>
+									<li>Strengthen Legal Frameworks</li>
+									<li>Foster Confidence in the State</li>
+								</ul>
+								<div class="p">
+									UNDP supports national and local authorities to rapidly restore justice and security services for the population in crisis-affected contexts. At the same time, UNDP works with leaders to identify and implement measures for medium- and long-term sector-wide justice and security reform, aligned with national priorities and owned by key stakeholders. As part of this assistance, UNDP helps strengthen the knowledge and skills of judges, prosecutors, lawyers, ministries, civil society, and the police. This comprehensive approach to institution building fosters confidence in the state and contributes to sustainable and transformational change.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="tile tile--m-lblue">
+				<div class="tile__inner">
+					<div class="tile__primary">
+						<div><span class="icon-access_to_justice"></span></div>
+						<h5>Access To Justice</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>Access To<br/>Justice</h5>
+							<ul>
+								<li>Empower Marginalized Groups</li>
+								<li>Raise Legal Awareness</li>
+								<li>Expand Legal Assistance</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tile__content">
+					<div class="tile__content-close"></div>
+					<div class="tile__content-outer">
+						<div class="tile__content-inner">
+							<div>
+								<h3>Access To Justice</h3>
+								<ul>
+									<li>Empower Marginalized Groups</li>
+									<li>Raise Legal Awareness</li>
+									<li>Expand Legal Assistance</li>
+								</ul>
+								<div class="p">
+									UNDP focuses on ensuring access to justice, especially for women, youth, persons with disabilities, marginalized groups, and displaced communities. UNDP works with legal aid providers to help people understand and access the justice system. Additionally, UNDP supports mobile courts to resolve criminal and civil matters in hard-to-reach areas. UNDP also engages in community legal awareness programmes and works directly with justice and security institutions to address the needs of disadvantaged groups in accessing justice - from linguistic and geographic barriers - to issues of systemic discrimination and marginalization.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="tile tile--d-lblue">
+				<div class="tile__inner">
+					<div class="tile__primary">
+						<div><span class="icon-community_security"></span></div>
+						<h5>Community Security</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>Community Security</h5>
+							<ul>
+								<li>Reduce Armed Violence</li>
+								<li>Enhance Police Services</li>
+								<li>Create Safe Environments</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tile__content">
+					<div class="tile__content-close"></div>
+					<div class="tile__content-outer">
+						<div class="tile__content-inner">
+							<div>
+								<h3>Community Security</h3>
+								<ul>
+									<li>Reduce Armed Violence</li>
+									<li>Enhance Police Services</li>
+									<li>Create Safe Environments</li>
+								</ul>
+								<div class="p">
+									UNDP’s community security approach focuses on involving communities to identify both the causes of insecurity, as well as solutions to improve their safety. This work is often linked with measures to curb the proliferation of small arms and light weapons. UNDP also aims to ensure that the security actors in crisis-affected situations are professional, accountable, and aware of human rights, especially to protect the most vulnerable. Strengthening civilian oversight of security services, developing community policing modalities, and training and equipping the police are key ways of enhancing the quality of services.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="tile tile--m-lblue">
+				<div class="tile__inner">
+					<div class="tile__primary">
+						<div><span class="icon-gender_justice"></span></div>
+						<h5>Gender Justice</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>Gender<br/>Justice</h5>
+							<ul>
+								<li>Tackle Sexual and Gender-Based Violence</li>
+								<li>Deliver Gender-Conscious Services</li>
+								<li>Promote Female Leaders</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tile__content">
+					<div class="tile__content-close"></div>
+					
+					<div class="tile__content-outer">
+						<div class="tile__content-inner">
+							<div>
+								<h3>Gender Justice</h3>
+								<ul>
+									<li>Tackle Sexual and Gender-Based Violence</li>
+									<li>Deliver Gender-Conscious Services</li>
+									<li>Promote Female Leaders</li>
+								</ul>
+								<div class="p">
+									UNDP works with national partners to increase their capacities to prevent and respond to sexual and gender-based violence (SGBV). This includes efforts to: foster a culture of awareness of the ills of SGBV, create and employ preventative mechanisms, fight impunity for these crimes, mobilize men in advocacy efforts, and provide survivors with psychosocial and socioeconomic support. Beyond tailored approaches to address SGBV, UNDP supports national and local authorities to empower women and girls through gender-conscious justice and security service delivery. For example, UNDP works with state and non-state actors to increase women’s participation and leadership in justice and security institutions and to develop and apply inclusive legal frameworks.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="tile tile--d-lblue">
+				<div class="tile__inner">
+					<div class="tile__primary">
+						<div><span class="icon-human_rights"></span></div>
+						<h5>Human Rights</h5>
+					</div>
+					<div class="tile__hover">
+						<div class="tile__hover-inner">
+							<h5>Human<br/>Rights</h5>
+							<ul>
+								<li>Promote and Protect Human Rights</li>
+								<li>Establish Oversight Mechanisms</li>
+								<li>Bridge Accountability Gaps</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="test" class="tile__content">
+					<div class="tile__content-close"></div>
+					<div class="tile__content-outer">
+						<div class="tile__content-inner">
+							<div>
+								<h3>Human Rights</h3>
+								<ul>
+									<li>Promote and Protect Human Rights</li>
+									<li>Establish Oversight Mechanisms</li>
+									<li>Bridge Accountability Gaps</li>
+								</ul>
+								<div class="p">
+									UNDP engages with national human rights institutions (NHRIs) as key actors for human rights promotion and protection. NHRIs are independent state institutions with the mandate and authority to monitor and advise other institutions, such as the government, judiciary, parliament, as well as security, and law enforcement. In conflict-affected contexts, NHRIs play a crucial role in bridging accountability gaps, where other justice, oversight, and complaints systems fail. Together with other partners, UNDP also supports country-level implementation of Universal Periodic Review and Treaty Body recommendations, by mainstreaming recommendations throughout development planning processes, including justice sector reform.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__sb-container"> <!-- scroll bar container -->
+						<div class="content_sb"> <!-- scroll bar -->
+							<div class="content_scrub"></div> <!-- scrub bar -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- END category tiles -->
+
+</div>
+<!-- END container -->
+
+
+<div id="templates">
+
+	<script id="tmp_country-list-li" type="x-template">
+		<li>
+			<div>
+				<div class="country-name">Country Name Here</div>
+				<div><span></span></div>
+			</div>
+		</li>
+	</script>
+
+	
+
+</div>
+
+	
+	<!-- js logic -->
+	<script src="assets/js/undp.bundle.js?v=1.2"></script>
+
+	
+
+</body>
+</html>
