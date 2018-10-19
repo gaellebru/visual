@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-height: 1000000px;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+ul, ol, dl, p, h1, h2, h3, h4, h5, h6, address, form, table, blockquote, applet, embed, object, iframe, frameset {
+    margin: 0 0 14px;
+}
+ul{
+    margin-left: 50px;
+}
+ol{
+    margin-left: 67px;
+}
+ul{
+    list-style: disc;
+}
+html, body, div, span, applet, embed, object, iframe, frameset, p, q, blockquote, sub, sup, a, abbr, acronym, font, img, small, center, h1, h2, h3, h4, h5, h6, b, strong, big, u, ins, i, cite, em, var, dfn, address, s, strike, del, dl, dt, dd, ol, ul, li, pre, code, kbd, samp, tt, fieldset, legend, form, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    border: 0;
+    background: none;
+}
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent
+}
+body{
+    margin:0;
+}
+img{border:none;}
+form,fieldset{
+    margin:0;
+    padding:0;
+    border:none;
+}
+#map-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.map-header{
+    padding: 40px 20px 0;
+    z-index: 9999;
+    font-family: 'Open Sans', sans-serif;
+    width: 1170px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin: 0 0 0 -585px;
+}
+.map-logo-area{
+    float: right;
+    margin: 0 10px;
+    width: 180px;
+}
+.ico-infos-holder{
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+    width: auto;
+    height: auto;
+    padding: 40px 10px;
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto 40px;
+    max-width: 1170px;
+}
+.ico-infos-holder .ico-infos{
+    display: inline-block;
+    vertical-align: middle;
+    width: 13%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.ico-infos-holder ul li{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-indent:-9999em;
+    width:34px;
+    height:34px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid #a9a9a9;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.ico-infos-holder ul li a{
+    display: block;
+    height: 100%;
+    border-radius: 100%;
+    overflow:hidden;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto;
+}
+.ico-infos-holder ul li#area1 a{ background-image:url(../images/ico-fisheries.png); }
+.ico-infos-holder ul li#area2 a{ background-image:url(../images/ico-pineapples.png); }
+.ico-infos-holder ul li#area3 a{ background-image:url(../images/ico-palm.png); }
+.ico-infos-holder ul li#area5 a{ background-image:url(../images/ico-coffee.png); }
+.ico-infos-holder ul li#area6 a{ background-image:url(../images/ico-cocoa.png); }
+.ico-infos-holder ul li#area12 a{ background-image:url(../images/ico-cattle.png); }
+.ico-infos-holder ul li#area11 a{ background-image:url(../images/ico-soy.png); }
+
+.ico-infos-holder ul li#area3:after{
+    content: "Palm Oil";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder ul li#area11:after{
+    content: "Soy";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder ul li#area2:after{
+    content: "Pineapples";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder .ico-infos li#area12,
+.ico-infos-holder .ico-infos li#area2,
+.ico-infos-holder .ico-infos li#area1,
+.ico-infos-holder .ico-infos li#area6,
+.ico-infos-holder .ico-infos li#area11,
+.ico-infos-holder .ico-infos li#area3,
+.ico-infos-holder .ico-infos li#area5{
+    top: inherit;
+    left: inherit;
+}
+.ico-infos-holder .ico-infos li#area5:after{
+    content: "Coffee";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder .ico-infos li#area3:after{
+    content: "Palm Oil";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder .ico-infos li#area11:after{
+    content: "Soy";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder .ico-infos li#area6:after{
+    content: "Cocoa";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder .ico-infos li#area12:after{
+    content: "Cattle";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder .ico-infos li#area2:after{
+    content: "Pineapples";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.ico-infos-holder .ico-infos li#area1:after{
+    content: "Fisheries";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    right: auto;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.map-logo-area img{
+    width: 100%;
+    height: auto;
+}
+.map-header h1{
+    color: #656767;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 27px;
+    margin: 0;
+}
+.map-holder{
+    overflow: auto;
+}
+.map {
+    font-family: 'Open Sans', sans-serif;
+    width:1170px;
+    height:615px;
+    margin: 40px auto;
+    position:relative;
+    background:url(../images/world-map.png) no-repeat;
+}
+.map img {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+}
+.map ul {
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+    list-style:none;
+    position:relative;
+    z-index: 99;
+}
+.map li {
+    position:absolute;
+    text-indent:-9999em;
+    width:34px;
+    height:34px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid #a9a9a9;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.map li.activestate { display:block;}
+.map li a{
+    display: block;
+    height: 100%;
+    border-radius: 100%;
+    overflow:hidden;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 auto;
+}
+.map li#area1 a{ background-image:url(../images/ico-fisheries.png); }
+.map li#area2 a{ background-image:url(../images/ico-pineapples.png); }
+.map li#area3 a{ background-image:url(../images/ico-palm.png); }
+.map li#area4 a{ background-image:url(../images/ico-fisheries.png); }
+.map li#area5 a{ background-image:url(../images/ico-coffee.png); }
+.map li#area6 a{ background-image:url(../images/ico-cocoa.png); }
+.map li#area7 a{ background-image:url(../images/ico-palm.png); }
+.map li#area8 a{ background-image:url(../images/ico-cocoa.png); }
+.map li#area9 a{ background-image:url(../images/ico-coffee.png); }
+.map li#area10 a{ background-image:url(../images/ico-cocoa.png); }
+.map li#area11 a{ background-image:url(../images/ico-soy.png); }
+.map li#area12 a{ background-image:url(../images/ico-cattle.png); }
+.map li#area13 a{ background-image:url(../images/ico-cocoa.png); }
+.map li#area14 a{ background-image:url(../images/ico-palm.png); }
+.map li#area15 a{ background-image:url(../images/ico-palm.png); }
+.map li#area16 a{ background-image:url(../images/ico-cocoa.png); }
+.map li#area17 a{ background-image:url(../images/ico-fisheries.png); }
+.map li#area18 a{ background-image:url(../images/ico-fisheries.png); }
+.map li#area19 a{ background-image:url(../images/ico-palm.png); }
+.map li#area20 a{ background-image:url(../images/ico-palm.png); }
+.map li.activestate { display:block;}
+.map li#area1 {
+    top: 338px;
+    left: 225px;
+}
+.map li#area1:after{
+    content: "Fisheries";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    right: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-right: none;
+}
+.map li#area2 {   
+    top: 338px;
+    left: 255px;
+}
+.map li#area3 {
+    top: 409px;
+    left: 244px;
+    z-index: 3;
+}
+.map li#area4 {
+    top: 409px;
+    left: 274px;
+    z-index: 4;
+}
+.map li#area4:after{
+    content: "Ecuador";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.map li#area5 {
+    top: 409px;
+    left: 213px;
+    z-index: 2;
+}
+.map li#area6 {
+    top: 409px;
+    left: 181px;
+    z-index: 1;
+}
+.map li#area7 {
+    top: 453px;
+    left: 309px;
+    z-index: 3;
+}
+.map li#area8 {
+    top: 453px;
+    left: 278px;
+    z-index: 2;
+}
+.map li#area9 {
+    top: 453px;
+    left: 247px;
+    z-index: 1;
+}
+.map li#area10 {
+    top: 292px;
+    left: 328px;
+    z-index: 1;
+}
+.map li#area10:after{
+    content: "Dominican Republic";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.map li#area11 {
+    top: 475px;
+    left: 387px;
+    z-index: 1;
+}
+.map li#area11:after{
+    content: "Paraguay";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.map li#area12 {
+    top: 475px;
+    left: 357px;
+    z-index: 2;
+}
+.map li#area13 {
+    top: 325px;
+    left: 516px;
+    z-index: 2;
+}
+.map li#area13:after{
+    content: "Cote d'lvoire";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.map li#area14 {
+    top: 325px;
+    left: 487px;
+    z-index: 1;
+}
+.map li#area15 {
+    top: 361px;
+    left: 502px;
+    z-index: 1;
+}
+.map li#area16 {
+    top: 372px;
+    left: 566px;
+    z-index: 1;
+}
+.map li#area16:after{
+    content: "Ghana";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.map li#area17 {
+    top: 309px;
+    right: 210px;
+    z-index: 1;
+}
+.map li#area17:after{
+    content: "Philippines";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    right: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-right: none;
+}
+.map li#area18 {
+    top: 354px;
+    right: 192px;
+    z-index: 2;
+}
+.map li#area18:after{
+    content: "Indonesia";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    left: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-left: none;
+}
+.map li#area19 {
+    top: 354px;
+    right: 222px;
+    z-index: 1;
+}
+.map li#area20 {
+    top: 409px;
+    right: 119px;
+    z-index: 1;
+}
+.map li#area20:after{
+    content: "Papua New Guinea";
+    position: absolute;
+    border: 2px solid #a9a9a9;
+    top: 2px;
+    right: 86.7%;
+    z-index: 1;
+    color: #656767;
+    text-indent: initial;
+    padding: 4px 10px;
+    border-right: none;
+}
+@media screen and (max-width: 1180px) {
+    .map-header {
+        width: 800px;
+        margin: 0 0 0 -400px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .ico-infos-frame{
+        padding: 0 6rem 0 0;
+    }
+    .map-header {
+        width: 500px;
+        margin: 0 0 0 -250px;
+    }
+    .ico-infos-holder .ico-infos{
+        width: 20%;
+        margin: 10px 0 10px -4px;
+    }
+    .ico-infos-holder ul li:after{
+        min-width: 80px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .ico-infos-holder .ico-infos{
+        width: 33.3%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ico-infos-holder .ico-infos{
+        width: 50%;
+    }
+    .map-header {
+        width: 400px;
+        margin: 0 0 0 -200px;
+        text-align: center;
+    }
+    .map-logo-area{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ico-infos-frame{
+        padding: 0 0 0 1.3rem;
+    }
+    .ico-infos-holder .ico-infos{
+        text-align: left;
+    }
+    .map-header {
+        width: 280px;
+        margin: 0 0 0 -140px;
+        text-align: center;
+    }
+}
